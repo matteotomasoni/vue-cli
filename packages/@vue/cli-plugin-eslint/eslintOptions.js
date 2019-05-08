@@ -1,4 +1,4 @@
-exports.config = (api, config) => {
+exports.config = (api, _config) => {
   const config = {
     root: true,
     env: { node: true },
@@ -8,7 +8,7 @@ exports.config = (api, config) => {
       'no-debugger': makeJSOnlyValue(`process.env.NODE_ENV === 'production' ? 'error' : 'off'`)
     }
   }
-  if (config === 'airbnb') {
+  if (_config === 'airbnb') {
     config.rules['no-param-reassign'] = ['error', {
       props: true,
       ignorePropertyModificationsFor: [
