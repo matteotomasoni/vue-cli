@@ -45,7 +45,7 @@ async function assertUpdates (project) {
   expect(eslintrc).toEqual(Object.assign({}, baseESLintConfig, {
     extends: ['plugin:vue/essential', '@vue/airbnb'],
     rules: {
-      'no-param-reassign' = ['error', {
+      'no-param-reassign': ['error', {
         props: true,
         ignorePropertyModificationsFor: [
           'state', // for vuex state
